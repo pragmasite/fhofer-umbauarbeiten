@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Construction/Renovation Business Theme - Slate & Stone with Warm Accents */
+
+@layer base {
+  :root {
+    /* Warm stone/slate palette for construction business */
+    --background: 210 20% 98%;
+    --foreground: 215 25% 20%;
+
+    --card: 210 15% 96%;
+    --card-foreground: 215 25% 20%;
+
+    --popover: 210 20% 98%;
+    --popover-foreground: 215 25% 20%;
+
+    /* Primary: Slate/Stone blue for professional appearance */
+    --primary: 215 40% 28%;
+    --primary-foreground: 210 20% 98%;
+
+    /* Secondary: Warm beige/tan complement */
+    --secondary: 30 35% 88%;
+    --secondary-foreground: 215 25% 20%;
+
+    /* Muted: Light stone gray */
+    --muted: 210 20% 92%;
+    --muted-foreground: 215 15% 50%;
+
+    /* Accent: Warm orange/terracotta for energy and warmth */
+    --accent: 25 85% 55%;
+    --accent-foreground: 210 20% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 210 15% 88%;
+    --input: 210 15% 92%;
+    --ring: 215 40% 28%;
+
+    --radius: 0.75rem;
+
+    /* Shadow definitions */
+    --shadow-soft: 0 4px 20px -4px hsl(215 40% 28% / 0.1);
+    --shadow-medium: 0 8px 30px -6px hsl(215 40% 28% / 0.15);
+
+    --sidebar-background: 210 20% 96%;
+    --sidebar-foreground: 215 25% 20%;
+    --sidebar-primary: 215 40% 28%;
+    --sidebar-primary-foreground: 210 20% 98%;
+    --sidebar-accent: 30 35% 88%;
+    --sidebar-accent-foreground: 215 25% 20%;
+    --sidebar-border: 210 15% 88%;
+    --sidebar-ring: 25 85% 55%;
+  }
+
+  .dark {
+    --background: 215 25% 15%;
+    --foreground: 210 20% 96%;
+
+    --card: 215 30% 20%;
+    --card-foreground: 210 20% 96%;
+
+    --popover: 215 25% 15%;
+    --popover-foreground: 210 20% 96%;
+
+    --primary: 210 20% 96%;
+    --primary-foreground: 215 40% 28%;
+
+    --secondary: 30 35% 35%;
+    --secondary-foreground: 210 20% 96%;
+
+    --muted: 215 20% 30%;
+    --muted-foreground: 210 15% 70%;
+
+    --accent: 25 85% 55%;
+    --accent-foreground: 215 25% 15%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 215 20% 25%;
+    --input: 215 20% 30%;
+    --ring: 25 85% 55%;
+
+    --sidebar-background: 215 25% 15%;
+    --sidebar-foreground: 210 20% 96%;
+    --sidebar-primary: 210 20% 96%;
+    --sidebar-primary-foreground: 215 40% 28%;
+    --sidebar-accent: 30 35% 35%;
+    --sidebar-accent-foreground: 210 20% 96%;
+    --sidebar-border: 215 20% 25%;
+    --sidebar-ring: 25 85% 55%;
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'DM Serif Display', serif;
+  }
+}

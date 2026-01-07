@@ -6,13 +6,22 @@ const Hours = () => {
   const { t } = useLanguage();
 
   // Schedule - No fixed hours for a craftsman (by appointment)
+  const getByAppointmentText = () => {
+    const lang = t.nav.profession;
+    if (lang === "UMBAUTEN & RENOVATIONEN") return "Nach Vereinbarung";
+    if (lang === "RENOVATIONS & RENOVATIONS") return "By appointment";
+    return "Sur rendez-vous";
+  };
+
+  const byAppointment = getByAppointmentText();
+
   const schedule = [
-    { hours: "Sur rendez-vous" }, // By appointment
-    { hours: "Sur rendez-vous" },
-    { hours: "Sur rendez-vous" },
-    { hours: "Sur rendez-vous" },
-    { hours: "Sur rendez-vous" },
-    { hours: "Sur rendez-vous" },
+    { hours: byAppointment },
+    { hours: byAppointment },
+    { hours: byAppointment },
+    { hours: byAppointment },
+    { hours: byAppointment },
+    { hours: byAppointment },
     { hours: t.hours.closed },
   ];
 
@@ -91,7 +100,7 @@ const Hours = () => {
             })}
           </div>
           <div className="px-6 py-4 bg-primary/5 border-t text-sm text-muted-foreground italic">
-            📞 {t.contact.callNow}: +41 79 833 33 22
+            {t.contact.callNow}: +41 79 833 33 22
           </div>
         </motion.div>
       </div>

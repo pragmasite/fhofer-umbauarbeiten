@@ -7,7 +7,7 @@ const About = () => {
   const stats = [
     { value: "25+", label: t.about.stat1 },
     { value: "500+", label: t.about.stat2 },
-    { value: "5.0 ⭐", label: t.about.stat3 },
+    { value: "5.0", label: t.about.stat3 },
   ];
 
   return (

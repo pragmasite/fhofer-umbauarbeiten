@@ -8,8 +8,15 @@ const Hero = () => {
 
   return (
     <section className="relative min-h-screen overflow-hidden pt-20">
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary/80 to-primary/60" />
+      {/* Background image */}
+      <div className="absolute inset-0">
+        <img
+          src="/images/hero-bg.jpg"
+          alt="Hero background"
+          className="h-full w-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-foreground/60 via-foreground/40 to-foreground/70" />
+      </div>
 
       {/* Decorative elements */}
       <div className="pointer-events-none absolute inset-0">
@@ -90,7 +97,7 @@ const Hero = () => {
           transition={{ delay: 1 }}
           className="mt-12 flex items-center gap-2 text-white/60 text-sm"
         >
-          📍 {t.hero.location}
+          {t.hero.location}
         </motion.div>
 
         {/* Scroll indicator - CLICKABLE */}

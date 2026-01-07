@@ -8,36 +8,42 @@ const Gallery = () => {
   const images = [
     {
       id: 1,
+      src: "/images/gallery-1.jpg",
       desc_fr: "Parquet chêne massif",
       desc_de: "Eichenvollparkett",
       desc_en: "Solid oak parquet",
     },
     {
       id: 2,
+      src: "/images/gallery-2.jpg",
       desc_fr: "Carrelage ceramic",
       desc_de: "Keramik Fliesen",
       desc_en: "Ceramic tiling",
     },
     {
       id: 3,
+      src: "/images/gallery-3.jpg",
       desc_fr: "Terrasse en bois",
       desc_de: "Holzterrasse",
       desc_en: "Wood terrace",
     },
     {
       id: 4,
+      src: "/images/gallery-4.jpg",
       desc_fr: "Revêtement mur",
       desc_de: "Wandverkleidung",
       desc_en: "Wall covering",
     },
     {
       id: 5,
+      src: "/images/gallery-5.jpg",
       desc_fr: "Dalle 120x20cm",
       desc_de: "Platte 120x20cm",
       desc_en: "120x20cm slab",
     },
     {
       id: 6,
+      src: "/images/gallery-6.jpg",
       desc_fr: "Escalier rénové",
       desc_de: "Renovierte Treppe",
       desc_en: "Renovated stairs",
@@ -82,19 +88,14 @@ const Gallery = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="group relative aspect-[4/3] cursor-pointer overflow-hidden rounded-2xl bg-gradient-to-br from-primary/20 to-accent/20"
+                className="group relative aspect-[4/3] cursor-pointer overflow-hidden rounded-2xl"
               >
-                {/* Placeholder with pattern */}
-                <div className="h-full w-full flex items-center justify-center bg-gradient-to-br from-primary/10 via-secondary/10 to-accent/10">
-                  <div className="text-center">
-                    <div className="text-4xl font-serif text-primary/40 mb-2">
-                      {image.id}
-                    </div>
-                    <div className="text-sm text-muted-foreground/40">
-                      Rénovation
-                    </div>
-                  </div>
-                </div>
+                {/* Image */}
+                <img
+                  src={image.src}
+                  alt={desc}
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
 
                 {/* Overlay on hover */}
                 <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
